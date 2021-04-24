@@ -1,4 +1,4 @@
-torch==1.5.1+gpu
-torchvision==0.6.1+gpu
+torch==1.5.1+cpu
+torchvision==0.6.1+cpu
 transformers
 flask
