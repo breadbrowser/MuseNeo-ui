@@ -14,7 +14,7 @@ def extend(text, size=20):
         text = '<|endoftext|>'
     tokens = tokenizer.encode(text)
     tokens = torch.tensor([tokens]).to(device)
-    tokens = model.generate(tokens, max_length=size+tokens.shape[1], do_sample=True,temperature=1,top_p=0.9,top_k=25)
+    tokens = model.generate(tokens, max_length=size+tokens.shape[1], do_sample=True,temperature=0.75,top_p=0.9,top_k=30)
     tokens = tokens[0].tolist()
     return tokenizer.decode(tokens)
 
